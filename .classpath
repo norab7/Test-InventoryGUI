@@ -2,11 +2,11 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/_Data/_Minecraft/_Plugins/InventoryGUI.jar"/>
 	<classpathentry kind="lib" path="C:/_Data/_Minecraft/_BuildTools/_1.13.2/spigot-1.13.2.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/C:/_Data/_Minecraft/_JavaDocs/spigot-api-1.13.2-R0.1-20181212.002221-61-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/_Data/_Minecraft/_Plugins/InventoryGUI.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
