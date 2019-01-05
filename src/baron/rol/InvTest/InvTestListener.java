@@ -20,16 +20,7 @@ public class InvTestListener implements Listener {
 		Player player = e.getPlayer();
 
 		if (!playerInvs.containsKey(player)) {
-			// InventoryGUI invGUI = new InventoryGUI(player, 54, "InvTestInv");
-
-			InvTest.INSTANCE.getServer().getPluginManager().registerEvents(new InventoryGUI(player, 54, "InvTestInv"), InvTest.INSTANCE);
-
-			// playerInvs.put(e.getPlayer(), invGUI);
-			//
-			// InvTestItem item = new InvTestItem(player);
-			// // invGUI.forceItem(0, item);
-			//
-			// System.out.println(invGUI.getPlayer());
+			InventoryGUI invG = new InventoryGUI(e.getPlayer(), 54, e.getPlayer().getName());
 		}
 
 	}
