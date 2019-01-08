@@ -2,15 +2,15 @@ package baron.rol.InvTest;
 
 import java.util.HashMap;
 
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import baron.rol.InventoryGUI.InventoryGUI;
+
+import baron.rol.Inventory.InventoryBuilder;
 
 public class InvTestListener implements Listener {
-	private HashMap<Player, InventoryGUI> playerInvs = new HashMap<>();
+	private HashMap<Player, InventoryBuilder> playerInvs = new HashMap<>();
 
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent e) {
@@ -20,7 +20,10 @@ public class InvTestListener implements Listener {
 		Player player = e.getPlayer();
 
 		if (!playerInvs.containsKey(player)) {
-			InventoryGUI invG = new InventoryGUI(e.getPlayer(), 54, e.getPlayer().getName());
+			playerInvs.put(e.getPlayer(), new InventoryBuilder(e.getPlayer(), 54, e.getPlayer().getName()));
+			
+			
+			playerInvs.get(e.getPlayer()).addItem(new ItemClickTypeMessage());
 		}
 
 	}

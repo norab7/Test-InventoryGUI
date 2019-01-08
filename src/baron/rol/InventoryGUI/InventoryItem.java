@@ -3,24 +3,31 @@ package baron.rol.InventoryGUI;
 import java.util.UUID;
 
 import org.bukkit.event.inventory.ClickType;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
 public abstract class InventoryItem extends ItemStack {
-	// private final UUID UID = UUID.randomUUID();
+	private final UUID UID = UUID.randomUUID();
 	private ItemStack item;
 
-	// public UUID getUID() {
-	// return UID;
-	// }
+	// ### Constructors ###
+	public InventoryItem() {
+
+	}
+	//
+
+	// ### Gettters ###
+	public UUID getUID() {
+		return UID;
+	}
 
 	public ItemStack getItem() {
 		return item;
 	}
+	//
 
-	public void setItem(ItemStack item) {
-		this.item = item;
-	}
-
-	public abstract void action(ClickType c);
+	// ### Abstract Methods ###
+	public abstract void action(InventoryClickEvent e);
+	//
 
 }
